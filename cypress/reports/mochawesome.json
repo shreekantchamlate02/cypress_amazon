@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 3,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-09-26T14:57:38.206Z",
+    "end": "2025-09-26T14:58:24.234Z",
+    "duration": 46028,
+    "testsRegistered": 4,
+    "passPercent": 75,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "425ff44c-4088-427e-87a6-c62d84347074",
+      "title": "",
+      "fullFile": "cypress\\e2e\\amazon.cy.js",
+      "file": "cypress\\e2e\\amazon.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8ced175-5e05-4169-934d-d7a34d390eb3",
+          "title": "Amazon End to End Functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify title of the page ",
+              "fullTitle": "Amazon End to End Functionality Verify title of the page ",
+              "timedOut": null,
+              "duration": 5548,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "amazonHomePage.homePage();\namazonHomePage.getTiteOfPage().should('contain', 'Shopping');",
+              "err": {},
+              "uuid": "c4648748-679a-4bd8-992c-0bec9b450f3b",
+              "parentUUID": "b8ced175-5e05-4169-934d-d7a34d390eb3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify Cart icon",
+              "fullTitle": "Amazon End to End Functionality Verify Cart icon",
+              "timedOut": null,
+              "duration": 4849,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "amazonHomePage.homePage();\namazonHomePage.isCartIconDisplayed().should('be.visible');",
+              "err": {},
+              "uuid": "caaec103-e382-4d3f-9b66-175806f9f296",
+              "parentUUID": "b8ced175-5e05-4169-934d-d7a34d390eb3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search product and select first product",
+              "fullTitle": "Amazon End to End Functionality Search product and select first product",
+              "timedOut": null,
+              "duration": 21172,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "amazonHomePage.homePage();\namazonHomePage.productSearch(loginCredential.productName);\namazonHomePage.selectFirstProcuctResults();\namazonHomePage.addProcuctToCart();",
+              "err": {},
+              "uuid": "c07ffb23-9175-4ce8-848f-8a4c9cffd546",
+              "parentUUID": "b8ced175-5e05-4169-934d-d7a34d390eb3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify logged in to the app",
+              "fullTitle": "Amazon End to End Functionality Verify logged in to the app",
+              "timedOut": null,
+              "duration": 11417,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "amazonHomePage.homePage();\namazonHomePage.loginToApp(loginCredential.username, loginCredential.password);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.nav-action-signin-button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.nav-action-signin-button`, but never found it.\n    at amazonPage.loginToApp (webpack://amazoncypress/./cypress/pages/amazonPages.cy.js:28:11)\n    at Context.eval (webpack://amazoncypress/./cypress/e2e/amazon.cy.js:31:19)",
+                "diff": null
+              },
+              "uuid": "4dd0ad3d-9c5e-4c2a-818c-eae604aa894f",
+              "parentUUID": "b8ced175-5e05-4169-934d-d7a34d390eb3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c4648748-679a-4bd8-992c-0bec9b450f3b",
+            "caaec103-e382-4d3f-9b66-175806f9f296",
+            "c07ffb23-9175-4ce8-848f-8a4c9cffd546"
+          ],
+          "failures": [
+            "4dd0ad3d-9c5e-4c2a-818c-eae604aa894f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 42986,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": true,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.3.0"
+    }
+  }
+}

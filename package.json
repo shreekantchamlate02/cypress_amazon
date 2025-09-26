@@ -1,0 +1,24 @@
+{
+  "name": "amazoncypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "del cypress/reports/*.json",
+    "test": "npm cypress_test || npm run posttest",
+    "cypress_test": "cypress run",
+    "posttest": "npm run merge_report && npm run generate-html-report",
+    "merge-report": "mochawesome-merge ./cypress/reports/*.json > ./merge_report.json",
+    "generate-html-report": "marge merge_report.json --reportDir cypress/reports"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.3.0",
+    "del-cli": "^7.0.0",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0"
+  }
+}
