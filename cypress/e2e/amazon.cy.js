@@ -30,4 +30,7 @@ describe('Amazon End to End Functionality', () => {
     amazonHomePage.homePage()
     amazonHomePage.loginToApp(loginCredential.username,loginCredential.password)
   })
+  it('',()=>{
+    
+  })
 })
